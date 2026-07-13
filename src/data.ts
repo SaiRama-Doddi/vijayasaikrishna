@@ -1,4 +1,11 @@
 import { ProductCategory, Product, Service, Testimonial, FAQItem, GalleryItem, PartnerBrand } from './types';
+import galImg1 from './assets/gallery/1.webp';
+import galImg2 from './assets/gallery/2.webp';
+import galImg3 from './assets/gallery/3.webp';
+import galImg5 from './assets/gallery/5.webp';
+import galImg6 from './assets/gallery/6.webp';
+import galImg7 from './assets/gallery/7.webp';
+import galImg8 from './assets/gallery/8.webp';
 
 export const COMPANY_DETAILS = {
   name: "Vijaya Sai Krishna Agencies",
@@ -361,43 +368,50 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     id: "gal-1",
     title: "Premium Ceramic & GVT Showcase",
     category: "showroom",
-    image: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80&w=800",
+    image: galImg1,
     description: "Interactive mock displays in our Visakhapatnam showroom for viewing tile sizes and surface finishes."
   },
   {
     id: "gal-2",
-    title: "High-End Bath fittings Array",
+    title: "High-End Bath Fittings Array",
     category: "showroom",
-    image: "https://images.unsplash.com/photo-1584622781564-1d987f7333c1?auto=format&fit=crop&q=80&w=800",
-    description: "Live-running faucet display zone featuring modern PVD Gold, Rose Gold, and Matte Black luxury items."
+    image: galImg2,
+    description: "Live-running faucet display zone featuring modern premium chrome, PVD Gold, and sanitaryware collections."
   },
   {
     id: "gal-3",
     title: "Vitrified Tile Pallet Inventory",
     category: "warehouse",
-    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800",
+    image: galImg3,
     description: "A glimpse of our massive, weather-proof stock warehouse in Visakhapatnam ready for rapid dispatch."
   },
   {
     id: "gal-4",
     title: "Heavy-Duty Flatbed Dispatch",
     category: "delivery",
-    image: "https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?auto=format&fit=crop&q=80&w=800",
+    image: galImg5,
     description: "Secure pallet-loading on delivery vehicles ensuring risk-free and breakage-free product transportation."
   },
   {
     id: "gal-5",
     title: "Consultant Architect Briefing",
     category: "team",
-    image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=800",
+    image: galImg6,
     description: "Our dedicated B2B sales consultants presenting our technical catalogs and samples to builders and designers."
   },
   {
     id: "gal-6",
     title: "Sanitaryware Closet Rack Area",
     category: "products",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800",
+    image: galImg7,
     description: "Wide collection of Rimless closets, smart WCs, and table-top basins from top-tier luxury manufacturers."
+  },
+  {
+    id: "gal-7",
+    title: "Premium Showroom Display",
+    category: "showroom",
+    image: galImg8,
+    description: "Elegant layout displays showcasing premium collections of vitrified tiles and luxury bathware."
   }
 ];
 

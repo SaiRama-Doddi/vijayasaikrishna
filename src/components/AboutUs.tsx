@@ -39,9 +39,8 @@ export default function AboutUs() {
             A Legacy of Quality &amp; Trust in Visakhapatnam
           </h2>
           <div className="w-16 h-1 bg-red-600 mt-4 rounded-full" />
-          <p className="mt-4 text-slate-600 text-sm md:text-base leading-relaxed">
-            For years, {COMPANY_DETAILS.name} has been the preferred corporate partner for premium interior finishes.
-            We specialize in bridging the gap between top global manufactures and local building developers.
+          <p className="mt-4 text-slate-600 text-sm md:text-base leading-relaxed lg:whitespace-nowrap">
+            Preferred partner bridging the gap between top global manufacturers and local developers.
           </p>
         </div>
 
