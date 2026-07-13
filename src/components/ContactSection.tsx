@@ -83,7 +83,13 @@ export default function ContactSection() {
       <div className="max-w-7xl mx-auto px-4 md:px-6">
 
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          className="text-center max-w-3xl mx-auto mb-16"
+        >
           <span className="text-red-600 font-bold text-xs uppercase tracking-widest bg-red-600/10 px-3.5 py-1.5 rounded-full inline-block mb-3">
             Get In Touch
           </span>
@@ -94,13 +100,19 @@ export default function ContactSection() {
           <p className="mt-4 text-slate-600 text-sm md:text-base leading-relaxed">
             Have an ongoing building project, sub-dealer enquiry, or retail interior requirement? Submit this rapid form and our procurement manager will call you back.
           </p>
-        </div>
+        </motion.div>
 
         {/* Main Grid: Left details, Right Form */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-16">
           
           {/* LEFT COLUMN: Contact Cards */}
-          <div className="lg:col-span-5 space-y-6">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+            className="lg:col-span-5 space-y-6"
+          >
             <h3 className="text-lg font-extrabold text-slate-900 mb-4">
               Direct Contact Information
             </h3>
@@ -147,10 +159,16 @@ export default function ContactSection() {
                 *We welcome walk-in dealers, construction engineers, and individual project home-owners during office hours.
               </p>
             </div>
-          </div>
+          </motion.div>
 
           {/* RIGHT COLUMN: Contact Form */}
-          <div className="lg:col-span-7">
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+            className="lg:col-span-7"
+          >
             <div className="bg-white rounded-2xl border border-slate-150 p-6 md:p-8 shadow-sm">
               <AnimatePresence mode="wait">
                 {!isSuccess ? (
@@ -290,12 +308,18 @@ export default function ContactSection() {
                 )}
               </AnimatePresence>
             </div>
-          </div>
+          </motion.div>
 
         </div>
 
         {/* Integrated Map & Regional Transport Fleet Banner */}
-        <div className="bg-white rounded-3xl overflow-hidden border border-slate-150 shadow-sm grid grid-cols-1 lg:grid-cols-12">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.7 }}
+          className="bg-white rounded-3xl overflow-hidden border border-slate-150 shadow-sm grid grid-cols-1 lg:grid-cols-12"
+        >
           {/* Iframe Column */}
           <div className="lg:col-span-7 h-80 md:h-[400px] bg-slate-100 relative">
             <iframe
@@ -352,7 +376,7 @@ export default function ContactSection() {
               </span>
             </div>
           </div>
-        </div>
+        </motion.div>
 
       </div>
     </section>

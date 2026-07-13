@@ -1,6 +1,7 @@
 import React from 'react';
 import { Star, Quote } from 'lucide-react';
 import { TESTIMONIALS } from '../data';
+import { motion } from 'motion/react';
 
 export default function Testimonials() {
   return (
@@ -8,7 +9,13 @@ export default function Testimonials() {
       <div className="max-w-7xl mx-auto px-4 md:px-6">
 
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          className="text-center max-w-3xl mx-auto mb-16"
+        >
           <span className="text-red-600 font-bold text-xs uppercase tracking-widest bg-red-600/10 px-3.5 py-1.5 rounded-full inline-block mb-3">
             Client Endorsements
           </span>
@@ -19,13 +26,17 @@ export default function Testimonials() {
           <p className="mt-4 text-slate-600 text-sm md:text-base leading-relaxed">
             Read what our premier business partners, corporate construction managers, and dealer network say about our product quality and wholesale distribution efficiency.
           </p>
-        </div>
+        </motion.div>
 
         {/* Testimonials Grid Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {TESTIMONIALS.map((test) => (
-            <div
+          {TESTIMONIALS.map((test, index) => (
+            <motion.div
               key={test.id}
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
               className="bg-white rounded-2xl border border-slate-150 p-6 md:p-8 shadow-sm hover:shadow-lg hover:border-red-600/20 transition-all duration-300 relative flex flex-col justify-between"
             >
               {/* Quote Mark Decoration */}
@@ -62,7 +73,7 @@ export default function Testimonials() {
                 </div>
               </div>
 
-            </div>
+            </motion.div>
           ))}
         </div>
 

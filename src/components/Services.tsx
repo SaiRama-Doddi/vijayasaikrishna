@@ -1,6 +1,7 @@
 import React from 'react';
 import * as Icons from 'lucide-react';
 import { SERVICES_LIST } from '../data';
+import { motion } from 'motion/react';
 
 export default function Services() {
   return (
@@ -12,7 +13,13 @@ export default function Services() {
       <div className="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
 
         {/* Section Title */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          className="text-center max-w-3xl mx-auto mb-16"
+        >
           <span className="text-red-500 font-bold text-xs uppercase tracking-widest bg-red-600/10 px-3.5 py-1.5 rounded-full inline-block mb-3 border border-red-600/20">
             What We Excel At
           </span>
@@ -23,7 +30,7 @@ export default function Services() {
           <p className="mt-4 text-slate-300 text-sm md:text-base leading-relaxed">
             From bulk B2B procurement to on-site custom logistics and official brand warranty assistance, we manage the complete lifecycle of premium interior surface sourcing.
           </p>
-        </div>
+        </motion.div>
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -32,8 +39,12 @@ export default function Services() {
             const IconComponent = (Icons as any)[service.iconName] || Icons.HelpCircle;
             
             return (
-              <div
+              <motion.div
                 key={service.id}
+                initial={{ opacity: 0, y: 25 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-slate-950/60 border border-slate-800 rounded-2xl p-6 hover:border-red-600/45 transition-all duration-300 hover:shadow-xl hover:shadow-slate-950/40 group flex flex-col justify-between"
               >
                 <div className="space-y-4">
@@ -57,13 +68,19 @@ export default function Services() {
                   <span>Service Code: VSK-0{index + 1}</span>
                   <span className="text-red-500 group-hover:underline cursor-pointer">Inquire Now →</span>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>
 
         {/* Call to Action Bar */}
-        <div className="mt-16 p-8 rounded-2xl bg-red-600 text-white flex flex-col md:flex-row items-center justify-between shadow-xl">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          className="mt-16 p-8 rounded-2xl bg-red-600 text-white flex flex-col md:flex-row items-center justify-between shadow-xl"
+        >
           <div className="mb-6 md:mb-0 space-y-1.5 text-center md:text-left">
             <h3 className="text-lg md:text-xl font-extrabold tracking-tight">
               Need a Custom Product Specification or Bulk Delivery?
@@ -81,7 +98,7 @@ export default function Services() {
             <Icons.PhoneCall size={14} className="text-red-500" />
             <span>Chat with Ravi Sankar</span>
           </a>
-        </div>
+        </motion.div>
 
       </div>
     </section>

@@ -31,7 +31,13 @@ export default function AboutUs() {
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         
         {/* Section Header */}
-        <div className="text-left max-w-5xl mb-12">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          className="text-left max-w-5xl mb-12"
+        >
           <span className="text-red-600 font-bold text-xs uppercase tracking-widest bg-red-600/10 px-3.5 py-1.5 rounded-full inline-block mb-3">
             Who We Are
           </span>
@@ -42,7 +48,7 @@ export default function AboutUs() {
           <p className="mt-4 text-slate-600 text-sm md:text-base leading-relaxed lg:whitespace-nowrap">
             Preferred partner bridging the gap between top global manufacturers and local developers.
           </p>
-        </div>
+        </motion.div>
 
         {/* Tab Selection */}
         <div className="flex justify-center border-b border-slate-200 mb-10 max-w-lg mx-auto">
@@ -65,7 +71,13 @@ export default function AboutUs() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           
           {/* LEFT: Illustrative Info Card */}
-          <div className="lg:col-span-5 space-y-6">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+            className="lg:col-span-5 space-y-6"
+          >
             <div className="bg-slate-900 text-white rounded-2xl p-6 md:p-8 shadow-xl relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-red-600/10 rounded-full blur-2xl -mr-6 -mt-6"></div>
               
@@ -107,10 +119,16 @@ export default function AboutUs() {
                 <p className="text-xs text-slate-500 font-medium">Bulk Stock Availability</p>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* RIGHT: Tab Contents */}
-          <div className="lg:col-span-7">
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+            className="lg:col-span-7"
+          >
             {activeTab === 'story' && (
               <div className="space-y-6">
                 <div>
@@ -194,7 +212,7 @@ export default function AboutUs() {
                 })}
               </div>
             )}
-          </div>
+          </motion.div>
 
         </div>
 

@@ -59,7 +59,13 @@ export default function WhyChooseUs() {
         {/* Top Feature Grid: Why Choose Us */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-20">
           
-          <div className="lg:col-span-5 space-y-6">
+          <motion.div
+            initial={{ opacity: 0, x: -35 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+            className="lg:col-span-5 space-y-6"
+          >
             <span className="text-red-600 font-bold text-xs uppercase tracking-widest bg-red-600/10 px-3.5 py-1.5 rounded-full inline-block">
               Our Value Proposition
             </span>
@@ -84,9 +90,15 @@ export default function WhyChooseUs() {
                 <p>Tax Transparent</p>
               </div>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <motion.div
+            initial={{ opacity: 0, x: 35 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+            className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6"
+          >
             {valueProps.map((prop, idx) => {
               const Icon = prop.icon;
               return (
@@ -99,12 +111,18 @@ export default function WhyChooseUs() {
                 </div>
               );
             })}
-          </div>
+          </motion.div>
 
         </div>
 
         {/* Animated Statistics Banner Card */}
-        <div className="bg-slate-950 text-white rounded-3xl p-8 md:p-12 shadow-xl relative overflow-hidden mb-20 border border-slate-800">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.7 }}
+          className="bg-slate-950 text-white rounded-3xl p-8 md:p-12 shadow-xl relative overflow-hidden mb-20 border border-slate-800"
+        >
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-red-600/5 rounded-full blur-3xl -mt-48"></div>
           
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8 relative z-10 text-center divide-y md:divide-y-0 md:divide-x divide-slate-800">
@@ -126,18 +144,24 @@ export default function WhyChooseUs() {
               );
             })}
           </div>
-        </div>
+        </motion.div>
 
         {/* Industries We Serve Section */}
         <div>
-          <div className="text-center max-w-2xl mx-auto mb-10">
+          <motion.div
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.5 }}
+            className="text-center max-w-2xl mx-auto mb-10"
+          >
             <h3 className="text-xl md:text-2xl font-extrabold text-slate-900 tracking-tight">
               Sectors &amp; Industries We Serve
             </h3>
             <p className="text-xs md:text-sm text-slate-500 mt-2 leading-relaxed">
               Our high stock capacity and comprehensive collections allow us to supply diverse sectors with extreme efficiency.
             </p>
-          </div>
+          </motion.div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-9 gap-4 text-center">
             {INDUSTRIES_SERVED.map((ind, idx) => {

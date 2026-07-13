@@ -1,6 +1,9 @@
 import React from 'react';
 import { PARTNER_BRANDS } from '../data';
-import { Award, CheckCircle2 } from 'lucide-react';
+import { 
+  Award, CheckCircle2, Droplet, ShowerHead, Grid, Bath, Layers, Hammer 
+} from 'lucide-react';
+import { motion } from 'motion/react';
 
 interface BrandSliderProps {
   onSelectBrand: (brandName: string) => void;
@@ -8,27 +11,89 @@ interface BrandSliderProps {
 
 export default function BrandSlider({ onSelectBrand }: BrandSliderProps) {
   
-  // Custom stylistic typographic logo mockups representing premium style of each brand
-  const getBrandLogoStyle = (name: string) => {
+  const getBrandTheme = (name: string) => {
     switch (name.toLowerCase()) {
       case 'kohler':
-        return { font: 'font-sans font-extrabold tracking-widest text-lg md:text-xl text-slate-900', style: 'border-slate-300' };
+        return {
+          bgClass: 'bg-blue-50 text-blue-600 border-blue-100',
+          textClass: 'text-blue-600',
+          lineClass: 'bg-blue-100',
+          icon: Droplet,
+          isItalic: false,
+          highlight: false
+        };
       case 'jaquar':
-        return { font: 'font-serif italic font-extrabold tracking-wide text-lg md:text-xl text-red-600', style: 'border-red-100' };
+        return {
+          bgClass: 'bg-amber-50 text-amber-600 border-amber-100',
+          textClass: 'text-amber-600',
+          lineClass: 'bg-amber-100',
+          icon: ShowerHead,
+          isItalic: true,
+          highlight: false
+        };
       case 'kajaria':
-        return { font: 'font-sans font-black tracking-normal text-lg md:text-xl text-slate-900 uppercase', style: 'border-slate-100' };
+        return {
+          bgClass: 'bg-teal-50 text-teal-600 border-teal-100',
+          textClass: 'text-teal-600',
+          lineClass: 'bg-teal-100',
+          icon: Grid,
+          isItalic: false,
+          highlight: false
+        };
       case 'somany':
-        return { font: 'font-sans font-bold tracking-tight text-lg md:text-xl text-slate-800 uppercase', style: 'border-slate-100' };
+        return {
+          bgClass: 'bg-violet-50 text-violet-600 border-violet-100',
+          textClass: 'text-violet-600',
+          lineClass: 'bg-violet-100',
+          icon: Bath,
+          isItalic: false,
+          highlight: false
+        };
       case 'hindware italian':
-        return { font: 'font-serif font-semibold tracking-wide text-md md:text-lg text-slate-700 uppercase', style: 'border-slate-100' };
+        return {
+          bgClass: 'bg-orange-50 text-orange-600 border-orange-100',
+          textClass: 'text-orange-600',
+          lineClass: 'bg-orange-100',
+          icon: Droplet,
+          isItalic: false,
+          highlight: false
+        };
       case 'carysil':
-        return { font: 'font-mono font-bold tracking-tight text-md md:text-lg text-slate-800', style: 'border-slate-200' };
+        return {
+          bgClass: 'bg-sky-50 text-sky-600 border-sky-100',
+          textClass: 'text-sky-600',
+          lineClass: 'bg-sky-100',
+          icon: Layers,
+          isItalic: false,
+          highlight: false
+        };
       case 'myk laticrete':
-        return { font: 'font-sans font-black tracking-widest text-xs md:text-sm text-slate-900 uppercase', style: 'border-slate-200' };
+        return {
+          bgClass: 'bg-red-50 text-red-600 border-red-100',
+          textClass: 'text-red-600',
+          lineClass: 'bg-red-100',
+          icon: Hammer,
+          isItalic: false,
+          highlight: true
+        };
       case 'johnson tiles':
-        return { font: 'font-sans font-bold text-md md:text-lg text-red-700 uppercase', style: 'border-red-200' };
+        return {
+          bgClass: 'bg-emerald-50 text-emerald-600 border-emerald-100',
+          textClass: 'text-emerald-600',
+          lineClass: 'bg-emerald-100',
+          icon: Grid,
+          isItalic: false,
+          highlight: false
+        };
       default:
-        return { font: 'font-sans font-bold text-slate-800', style: 'border-slate-100' };
+        return {
+          bgClass: 'bg-slate-50 text-slate-600 border-slate-100',
+          textClass: 'text-slate-600',
+          lineClass: 'bg-slate-100',
+          icon: Award,
+          isItalic: false,
+          highlight: false
+        };
     }
   };
 
@@ -42,62 +107,92 @@ export default function BrandSlider({ onSelectBrand }: BrandSliderProps) {
   };
 
   return (
-    <section id="brands" className="py-20 bg-white border-b border-slate-100">
+    <section id="brands" className="py-24 bg-white border-b border-slate-100">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
 
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-red-600 font-bold text-xs uppercase tracking-widest bg-red-600/10 px-3.5 py-1.5 rounded-full inline-block mb-3">
-            Authorized Brands
-          </span>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          className="text-center max-w-3xl mx-auto mb-20"
+        >
+          <div className="flex items-center justify-center space-x-2 text-red-600 mb-2">
+            <span className="h-px w-8 bg-red-600" />
+            <span className="font-extrabold text-xs uppercase tracking-widest">Our Brands</span>
+            <span className="h-px w-8 bg-red-600" />
+          </div>
           <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
-            Brands We Trust &amp; Deal In
+            Trusted Brands. Premium Quality.
           </h2>
-          <div className="w-16 h-1 bg-red-600 mx-auto mt-4 rounded-full" />
-          <p className="mt-4 text-slate-600 text-sm md:text-base leading-relaxed">
-            We source our collections directly from leading national and global manufacturers. Click any brand card to instantly view its premium product catalog.
+          <div className="flex items-center justify-center space-x-1.5 mt-3">
+            <span className="w-1.5 h-1.5 rounded-full bg-red-600" />
+            <span className="w-1.5 h-1.5 rounded-full bg-red-600" />
+          </div>
+          <p className="mt-5 text-slate-500 text-sm md:text-base leading-relaxed font-medium">
+            We partner with world-class brands to bring you the finest range of tiles, sanitaryware, bath fittings, and hardware solutions.
           </p>
-        </div>
+        </motion.div>
 
-        {/* Brands Responsive Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          {PARTNER_BRANDS.map((brand) => {
-            const logoTheme = getBrandLogoStyle(brand.name);
+        {/* Brands Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12 pt-4">
+          {PARTNER_BRANDS.map((brand, idx) => {
+            const theme = getBrandTheme(brand.name);
+            const IconComponent = theme.icon;
+            
             return (
-              <div
+              <motion.div
                 key={brand.id}
                 onClick={() => handleBrandClick(brand.name)}
-                className="bg-slate-50 hover:bg-white rounded-2xl p-6 border border-slate-100 hover:border-red-600/30 transition-all duration-300 cursor-pointer shadow-sm hover:shadow-md text-center flex flex-col justify-between group h-48"
+                initial={{ opacity: 0, y: 25 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5, delay: idx * 0.05 }}
+                className={`bg-white rounded-2xl p-6 pt-9 border ${
+                  theme.highlight 
+                    ? 'border-red-500 shadow-md shadow-red-500/5' 
+                    : 'border-slate-150'
+                } hover:border-red-500 hover:shadow-xl transition-all duration-300 cursor-pointer text-center flex flex-col justify-between group relative h-[240px]`}
               >
-                {/* Brand Typographic Badge */}
-                <div className="h-16 flex items-center justify-center border-b border-slate-150/50 pb-3 mb-3">
-                  <span className={`${logoTheme.font} group-hover:scale-105 transition-transform duration-300`}>
-                    {brand.name}
-                  </span>
+                {/* Floating Icon Badge */}
+                <div className={`absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full border-4 border-white flex items-center justify-center shadow-md ${theme.bgClass}`}>
+                  <IconComponent size={18} className="stroke-[2.5]" />
                 </div>
 
-                {/* Description & Metadata */}
-                <div className="space-y-1">
-                  <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider font-mono">
-                    {brand.category}
-                  </p>
-                  <p className="text-[11px] text-slate-500 line-clamp-2 leading-relaxed">
-                    {brand.description}
-                  </p>
+                {/* Brand Name */}
+                <div className="mt-1">
+                  {theme.isItalic ? (
+                    <h3 className="text-2xl font-bold font-serif italic text-red-600 tracking-wide py-0.5">Jaquar</h3>
+                  ) : (
+                    <h3 className="text-lg font-black text-slate-900 uppercase tracking-wider">{brand.name}</h3>
+                  )}
                 </div>
 
-                {/* Brand Selector CTA Indicator */}
-                <div className="mt-4 pt-2 border-t border-slate-100 flex items-center justify-center space-x-1 text-[9px] font-bold uppercase tracking-wider text-slate-400 group-hover:text-red-600 transition-colors">
-                  <Award size={10} />
+                {/* Category Divider Line */}
+                <div className="flex items-center justify-center space-x-2 my-2">
+                  <div className={`h-px flex-grow ${theme.lineClass}`} />
+                  <span className={`text-[9px] font-black tracking-wider uppercase ${theme.textClass}`}>{brand.category}</span>
+                  <div className={`h-px flex-grow ${theme.lineClass}`} />
+                </div>
+
+                {/* Description */}
+                <p className="text-[11px] text-slate-500 leading-relaxed max-w-[210px] mx-auto line-clamp-2">
+                  {brand.description}
+                </p>
+
+                {/* CTA Link */}
+                <div className={`mt-4 pt-3 border-t border-slate-100 flex items-center justify-center space-x-1.5 text-[9px] font-black uppercase tracking-wider ${theme.textClass} group-hover:scale-105 transition-transform`}>
+                  <Grid size={11} />
                   <span>View Products →</span>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>
 
-        {/* Certificate / Trust Banner */}
-        <div className="mt-12 bg-slate-950 text-white rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between border border-slate-800">
+        {/* Trust Banner */}
+        <div className="mt-16 bg-slate-950 text-white rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between border border-slate-800 shadow-lg">
           <div className="flex items-center space-x-4 mb-4 sm:mb-0">
             <div className="w-10 h-10 rounded-full bg-red-600/10 text-red-500 flex items-center justify-center flex-shrink-0">
               <CheckCircle2 size={20} />
