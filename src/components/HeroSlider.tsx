@@ -66,7 +66,7 @@ export default function HeroSlider({ onNavigate }: HeroSliderProps) {
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 min-h-[520px] lg:h-[560px] relative z-10">
           
           {/* Left Column Content */}
-          <div className="lg:col-span-6 xl:col-span-5 flex flex-col justify-start px-4 md:px-6 pt-6 lg:pt-10 pb-10 space-y-6 relative z-10">
+          <div className="lg:col-span-7 xl:col-span-6 flex flex-col justify-start px-4 md:px-6 pt-6 lg:pt-10 pb-10 space-y-6 relative z-10">
             
             {/* Pill Tag */}
             <motion.div
@@ -85,7 +85,7 @@ export default function HeroSlider({ onNavigate }: HeroSliderProps) {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1, duration: 0.6 }}
-                className="text-3xl md:text-4xl lg:text-4.5xl xl:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.15]"
+                className="text-3xl md:text-[38px] lg:text-[38px] xl:text-[46px] font-extrabold text-slate-900 tracking-tight leading-[1.15]"
               >
                 Trusted <span className="text-red-600">B2B Supply &</span> <br className="hidden lg:block" /> Logistics Partner
               </motion.h1>
@@ -163,7 +163,7 @@ export default function HeroSlider({ onNavigate }: HeroSliderProps) {
           </div>
 
           {/* Right Column Content - Diagonal Image & Stats */}
-          <div className="lg:col-span-6 xl:col-span-7 relative h-[280px] sm:h-[350px] lg:h-full overflow-hidden">
+          <div className="lg:col-span-5 xl:col-span-6 relative h-[280px] sm:h-[350px] lg:h-full overflow-hidden">
             
             {/* Red Diagonal Border Backdrop */}
             <div className="absolute inset-0 bg-red-600 hero-clip-border hidden lg:block" />
