@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import heroBg from '../assets/hero_bg.png';
+import tilesHero from '../assets/tiles_hero.png';
 import { 
   Award, Tag, ShieldCheck, Warehouse, Package, ArrowRight, 
   PhoneCall, Users, MapPin, Layers, Headphones, Building2 
@@ -85,9 +85,9 @@ export default function HeroSlider({ onNavigate }: HeroSliderProps) {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1, duration: 0.6 }}
-                className="text-3xl md:text-[38px] lg:text-[38px] xl:text-[46px] font-extrabold text-slate-900 tracking-tight leading-[1.15]"
+                className="text-3xl md:text-[36px] lg:text-[36px] xl:text-[44px] font-extrabold text-slate-900 tracking-tight leading-[1.2]"
               >
-                Trusted <span className="text-red-600">B2B Supply &</span> <br className="hidden lg:block" /> Logistics Partner
+                Reliable Supply. <br className="hidden lg:block" /> <span className="text-red-600">Trusted Quality.</span> <br className="hidden lg:block" /> Lasting Partnerships.
               </motion.h1>
               
               <motion.p
@@ -96,7 +96,7 @@ export default function HeroSlider({ onNavigate }: HeroSliderProps) {
                 transition={{ delay: 0.2, duration: 0.5 }}
                 className="text-xs md:text-sm text-slate-500 leading-relaxed font-medium max-w-xl"
               >
-                Partnering with global giants like Kohler, Jaquar, and Kajaria to supply contractors, builders, and sub-dealers across Coastal Andhra Pradesh.
+                Empowering businesses with premium products, seamless distribution, and exceptional service across Andhra Pradesh. Your success is our commitment.
               </motion.p>
             </div>
 
@@ -147,7 +147,7 @@ export default function HeroSlider({ onNavigate }: HeroSliderProps) {
                 className="bg-red-600 hover:bg-red-700 text-white font-extrabold px-6 py-3 rounded-xl text-xs uppercase tracking-wider flex items-center justify-center space-x-2 transition-all duration-200 shadow-md shadow-red-600/15 hover:shadow-lg hover:shadow-red-600/25 active:scale-95 cursor-pointer"
               >
                 <Package size={15} />
-                <span>Explore Catalog</span>
+                <span>View Our Products</span>
                 <ArrowRight size={13} />
               </button>
               
@@ -156,7 +156,7 @@ export default function HeroSlider({ onNavigate }: HeroSliderProps) {
                 className="bg-white hover:bg-slate-50 text-slate-800 font-extrabold px-6 py-3 rounded-xl text-xs uppercase tracking-wider border border-slate-200 flex items-center justify-center space-x-2 transition-all duration-200 active:scale-95 cursor-pointer shadow-sm"
               >
                 <PhoneCall size={15} className="text-red-600" />
-                <span>Contact B2B Desk</span>
+                <span>Contact Our Team</span>
               </button>
             </motion.div>
 
@@ -171,8 +171,8 @@ export default function HeroSlider({ onNavigate }: HeroSliderProps) {
             {/* Image Container with Diagonal Clip */}
             <div className="absolute inset-y-0 right-0 left-0 lg:left-[12px] bg-slate-900 hero-clip-image">
               <img
-                src={heroBg}
-                alt="Logistics and Warehousing"
+                src={tilesHero}
+                alt="Luxury Tiles and Sanitaryware Showroom"
                 className="w-full h-full object-cover object-center"
               />
               {/* Overlay gradient */}
