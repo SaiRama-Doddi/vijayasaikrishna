@@ -184,7 +184,7 @@ export default function HeroSlider({ onNavigate }: HeroSliderProps) {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.5, duration: 0.6 }}
-              className="absolute bottom-4 right-4 z-20 bg-slate-950/95 text-white py-2.5 px-5 rounded-xl flex items-center space-x-5 shadow-xl border border-slate-800/60 hidden sm:flex max-w-full"
+              className="absolute bottom-16 lg:bottom-20 right-4 z-20 bg-slate-950/95 text-white py-2.5 px-5 rounded-xl flex items-center space-x-5 shadow-xl border border-slate-800/60 hidden sm:flex max-w-full"
             >
               <div className="flex items-center space-x-2.5">
                 <div className="w-8.5 h-8.5 rounded-full bg-red-600 flex items-center justify-center text-white flex-shrink-0">
