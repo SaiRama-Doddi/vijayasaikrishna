@@ -4,7 +4,7 @@ import { TESTIMONIALS } from '../data';
 
 export default function Testimonials() {
   return (
-    <section className="py-20 bg-slate-50 border-b border-slate-150">
+    <section id="testimonials" className="py-20 bg-slate-50 border-b border-slate-150">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
 
         {/* Section Header */}

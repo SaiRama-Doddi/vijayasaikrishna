@@ -2,6 +2,7 @@ import React from 'react';
 import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Send, Star, ShieldCheck } from 'lucide-react';
 import { COMPANY_DETAILS, PRODUCT_CATEGORIES } from '../data';
 import VSKLogo from './VSKLogo';
+import logoImg from '../assets/logo.png';
 
 interface FooterProps {
   onNavigate: (sectionId: string) => void;
@@ -33,7 +34,7 @@ export default function Footer({ onNavigate }: FooterProps) {
         {/* Company Column */}
         <div className="lg:col-span-4 space-y-5">
           <div className="flex items-center space-x-3 cursor-pointer" onClick={() => handleLinkClick('home')}>
-            <VSKLogo iconOnly={true} size="md" className="drop-shadow-sm opacity-95" />
+            <img src={logoImg} alt="Vijaya Sai Krishna Agencies" className="h-12 w-auto object-contain drop-shadow-sm opacity-95" />
             <div className="space-y-1">
               <div className="flex items-baseline space-x-1">
                 <span className="text-xl font-extrabold tracking-tight text-white">Vijaya Sai Krishna</span>

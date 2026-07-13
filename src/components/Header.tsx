@@ -4,6 +4,7 @@ import { Phone, Mail, Clock, MapPin, ShoppingBag, Menu, X, ChevronDown, MessageS
 import { COMPANY_DETAILS, PRODUCT_CATEGORIES } from '../data';
 import { EnquiryItem } from '../types';
 import VSKLogo from './VSKLogo';
+import logoImg from '../assets/logo.png';
 
 interface HeaderProps {
   enquiryCart: EnquiryItem[];
@@ -31,7 +32,7 @@ export default function Header({ enquiryCart, onOpenCart, onNavigate }: HeaderPr
     { name: 'Gallery', id: 'gallery' },
     { name: 'Brands', id: 'brands' },
     { name: 'FAQs', id: 'faq' },
-    { name: 'Contact', id: 'contact' },
+    { name: 'Testimonials', id: 'testimonials' },
   ];
 
   return (
@@ -64,21 +65,11 @@ export default function Header({ enquiryCart, onOpenCart, onNavigate }: HeaderPr
 
       {/* Main Navbar */}
       <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100 transition-all">
-        <div className="max-w-7xl mx-auto px-4 md:px-6 h-20 flex justify-between items-center">
+        <div className="max-w-7xl mx-auto px-4 md:px-6 h-16 flex justify-between items-center">
           
-          {/* Brand Logo - VSK Styled */}
-          <div className="flex items-center space-x-3 cursor-pointer" onClick={() => handleLinkClick('home')}>
-            {/* Authentic VSK 4-diamond vector logo */}
-            <div className="relative flex items-center justify-center">
-              <VSKLogo iconOnly={true} size="md" className="drop-shadow-sm hover:scale-105 transition-transform" />
-            </div>
-            <div>
-              <div className="flex items-baseline space-x-1">
-                <span className="text-xl font-extrabold tracking-tight text-slate-900">Vijaya Sai Krishna</span>
-                <span className="text-red-600 font-medium text-xs tracking-wider uppercase">Agencies</span>
-              </div>
-              <p className="text-[10px] text-slate-500 font-mono tracking-wider">TILES & SANITARY • Visakhapatnam</p>
-            </div>
+          {/* Brand Logo */}
+          <div className="relative flex items-center cursor-pointer h-16 w-32" onClick={() => handleLinkClick('home')}>
+            <img src={logoImg} alt="Vijaya Sai Krishna Agencies" className="absolute left-0 top-1/2 -translate-y-1/2 h-24 max-w-none w-auto object-contain drop-shadow-md hover:scale-105 transition-transform" />
           </div>
 
           {/* Desktop Navigation Links */}
@@ -146,28 +137,13 @@ export default function Header({ enquiryCart, onOpenCart, onNavigate }: HeaderPr
 
           {/* Action Area: Cart and Quick Inquiry */}
           <div className="flex items-center space-x-3">
-            {/* Quick Quote Enquiry Cart Button */}
-            <button
-              onClick={onOpenCart}
-              className="relative p-2.5 bg-slate-900 text-white rounded-full hover:bg-slate-800 transition-all flex items-center justify-center shadow-md shadow-slate-900/10 hover:scale-105 active:scale-95 cursor-pointer"
-              title="View Enquiry List"
-              id="enquiry-cart-btn"
-            >
-              <ShoppingBag size={18} />
-              {totalCartItems > 0 && (
-                <span className="absolute -top-1 -right-1.5 bg-red-600 text-white text-[10px] font-extrabold px-1.5 py-0.5 rounded-full min-w-[18px] text-center ring-2 ring-white">
-                  {totalCartItems}
-                </span>
-              )}
-            </button>
-
             {/* Quote Action CTA Button */}
             <button
               onClick={() => handleLinkClick('contact')}
               className="hidden sm:flex items-center space-x-1.5 bg-red-600 hover:bg-red-700 text-white px-4 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-all duration-200 shadow-md shadow-red-600/15 hover:shadow-lg hover:shadow-red-600/25 active:scale-95 cursor-pointer"
             >
               <MessageSquare size={14} />
-              <span>Get Free Quote</span>
+              <span>Contact Us</span>
             </button>
 
             {/* Mobile Menu Toggle button */}
@@ -236,7 +212,7 @@ export default function Header({ enquiryCart, onOpenCart, onNavigate }: HeaderPr
                     className="w-full flex items-center justify-center space-x-2 bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg text-sm font-bold uppercase tracking-wider"
                   >
                     <MessageSquare size={16} />
-                    <span>Get Fast Quote</span>
+                    <span>Contact Us</span>
                   </button>
                 </div>
               </div>

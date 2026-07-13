@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { Target, Compass, Award, ShieldCheck, Gem, UserCheck, Star, Users } from 'lucide-react';
 import { COMPANY_DETAILS } from '../data';
 import VSKLogo from './VSKLogo';
+import logoImg from '../assets/logo.png';
 
 export default function AboutUs() {
   const [activeTab, setActiveTab] = useState<'story' | 'vision-mission' | 'values'>('story');
@@ -71,7 +72,7 @@ export default function AboutUs() {
               
               {/* Dynamic corporate brand vector logo stamp */}
               <div className="mb-6 pb-6 border-b border-slate-800/80 flex justify-center">
-                <VSKLogo size="md" textColor="#ffffff" className="max-w-[190px] h-auto drop-shadow-md" />
+                <img src={logoImg} alt="Vijaya Sai Krishna Agencies" className="max-h-20 w-auto object-contain drop-shadow-md" />
               </div>
               
               <span className="text-red-500 font-mono text-[11px] uppercase tracking-widest block mb-2">Our Foundation Slogan</span>
