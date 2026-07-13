@@ -31,7 +31,7 @@ export default function AboutUs() {
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         
         {/* Section Header */}
-        <div className="text-left max-w-3xl mb-12">
+        <div className="text-left max-w-5xl mb-12">
           <span className="text-red-600 font-bold text-xs uppercase tracking-widest bg-red-600/10 px-3.5 py-1.5 rounded-full inline-block mb-3">
             Who We Are
           </span>
