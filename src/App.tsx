@@ -80,7 +80,7 @@ export default function App() {
       />
 
       {/* Main Content Layout */}
-      <main className="flex-grow">
+      <main className="flex-grow overflow-x-hidden">
         
         {/* 1. Hero Sliders Carousel */}
         <HeroSlider onNavigate={handleNavigate} />
