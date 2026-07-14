@@ -18,7 +18,7 @@ export default function Services() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
-          className="text-center max-w-3xl mx-auto mb-16"
+          className="text-left max-w-3xl mb-16"
         >
           <span className="text-red-500 font-bold text-xs uppercase tracking-widest bg-red-600/10 px-3.5 py-1.5 rounded-full inline-block mb-3 border border-red-600/20">
             What We Excel At
@@ -26,9 +26,9 @@ export default function Services() {
           <h2 className="text-3xl md:text-4xl font-extrabold text-white tracking-tight">
             Comprehensive Trade &amp; Distribution Services
           </h2>
-          <div className="w-16 h-1 bg-red-600 mx-auto mt-4 rounded-full" />
-          <p className="mt-4 text-slate-300 text-sm md:text-base leading-relaxed">
-            From bulk B2B procurement to on-site custom logistics and official brand warranty assistance, we manage the complete lifecycle of premium interior surface sourcing.
+          <div className="w-16 h-1 bg-red-600 mt-4 rounded-full" />
+          <p className="mt-4 text-slate-300 text-sm md:text-base leading-relaxed lg:whitespace-nowrap">
+            Complete wholesale supply, custom logistics, and official manufacturer warranty liaison.
           </p>
         </motion.div>
 

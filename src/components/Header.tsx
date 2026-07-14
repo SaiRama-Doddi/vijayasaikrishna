@@ -19,9 +19,17 @@ export default function Header({ enquiryCart, onOpenCart, onNavigate }: HeaderPr
   const totalCartItems = enquiryCart.reduce((sum, item) => sum + item.quantity, 0);
 
   const handleLinkClick = (id: string) => {
-    onNavigate(id);
+    const wasMobileOpen = isMobileMenuOpen;
     setIsMobileMenuOpen(false);
     setIsMegaMenuOpen(false);
+
+    if (wasMobileOpen) {
+      setTimeout(() => {
+        onNavigate(id);
+      }, 300);
+    } else {
+      onNavigate(id);
+    }
   };
 
   const navLinks = [
@@ -163,7 +171,7 @@ export default function Header({ enquiryCart, onOpenCart, onNavigate }: HeaderPr
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              className="lg:hidden border-t border-slate-100 bg-white w-full overflow-hidden"
+              className="lg:hidden border-t border-slate-100 bg-white w-full overflow-y-auto max-h-[calc(100vh-4rem)]"
             >
               <div className="p-4 space-y-1.5">
                 {navLinks.map((link) => {

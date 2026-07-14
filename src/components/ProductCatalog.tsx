@@ -93,7 +93,7 @@ export default function ProductCatalog({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
-          className="text-center max-w-3xl mx-auto mb-12"
+          className="text-left max-w-3xl mb-12"
         >
           <span className="text-red-600 font-bold text-xs uppercase tracking-widest bg-red-600/10 px-3.5 py-1.5 rounded-full inline-block mb-3">
             Product Catalog
@@ -101,9 +101,9 @@ export default function ProductCatalog({
           <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
             Explore Premium Product Ranges
           </h2>
-          <div className="w-16 h-1 bg-red-600 mx-auto mt-4 rounded-full" />
-          <p className="mt-4 text-slate-600 text-sm md:text-base leading-relaxed">
-            Select items to add to your virtual B2B quotation basket. We supply 100% genuine products with complete manufacturer backup warranty.
+          <div className="w-16 h-1 bg-red-600 mt-4 rounded-full" />
+          <p className="mt-4 text-slate-600 text-sm md:text-base leading-relaxed lg:whitespace-nowrap">
+            Select premium products for your B2B quotation basket with full manufacturer warranty.
           </p>
         </motion.div>
 

@@ -27,16 +27,16 @@ export default function GallerySection() {
       <div className="max-w-7xl mx-auto px-4 md:px-6">
 
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12">
+        <div className="text-left max-w-3xl mb-12">
           <span className="text-red-600 font-bold text-xs uppercase tracking-widest bg-red-600/10 px-3.5 py-1.5 rounded-full inline-block mb-3">
             Media Gallery
           </span>
           <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
             Our Showroom, Stock &amp; Operations
           </h2>
-          <div className="w-16 h-1 bg-red-600 mx-auto mt-4 rounded-full" />
-          <p className="mt-4 text-slate-600 text-sm md:text-base leading-relaxed">
-            Take a virtual tour of our premium interior fittings gallery, massive warehouse storage depots, and our logistics fleet servicing Visakhapatnam.
+          <div className="w-16 h-1 bg-red-600 mt-4 rounded-full" />
+          <p className="mt-4 text-slate-600 text-sm md:text-base leading-relaxed lg:whitespace-nowrap">
+            Explore our premium interior fittings display, massive warehouse depots, and delivery fleet.
           </p>
         </div>
 

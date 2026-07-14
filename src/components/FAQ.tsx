@@ -20,7 +20,7 @@ export default function FAQ() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
-          className="text-center max-w-2xl mx-auto mb-16"
+          className="text-left max-w-2xl mb-16"
         >
           <span className="text-red-600 font-bold text-xs uppercase tracking-widest bg-red-600/10 px-3.5 py-1.5 rounded-full inline-block mb-3">
             Common Inquiries
@@ -28,9 +28,9 @@ export default function FAQ() {
           <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
             Frequently Asked Questions
           </h2>
-          <div className="w-16 h-1 bg-red-600 mx-auto mt-4 rounded-full" />
-          <p className="mt-4 text-slate-600 text-sm leading-relaxed">
-            Quickly resolve your concerns regarding our order placements, showroom consultations, custom project transportations, and B2B pricing.
+          <div className="w-16 h-1 bg-red-600 mt-4 rounded-full" />
+          <p className="mt-4 text-slate-600 text-sm leading-relaxed lg:whitespace-nowrap">
+            Find answers to key questions about order processing, logistics, and B2B pricing.
           </p>
         </motion.div>
 

@@ -1,1 +1,11 @@
 @import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", sans-serif;
+  --font-mono: "Outfit", monospace;
+  --font-serif: "Outfit", serif;
+}
+
+body, input, button, select, textarea {
+  font-family: "Outfit", sans-serif;
+}

@@ -153,13 +153,13 @@ export default function WhyChooseUs() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.5 }}
-            className="text-center max-w-2xl mx-auto mb-10"
+            className="text-left max-w-2xl mb-10"
           >
             <h3 className="text-xl md:text-2xl font-extrabold text-slate-900 tracking-tight">
               Sectors &amp; Industries We Serve
             </h3>
-            <p className="text-xs md:text-sm text-slate-500 mt-2 leading-relaxed">
-              Our high stock capacity and comprehensive collections allow us to supply diverse sectors with extreme efficiency.
+            <p className="text-xs md:text-sm text-slate-500 mt-2 leading-relaxed lg:whitespace-nowrap">
+              Supplying diverse industries and projects with high stock capacity and extreme efficiency.
             </p>
           </motion.div>
 

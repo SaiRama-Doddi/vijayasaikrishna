@@ -88,7 +88,7 @@ export default function ContactSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
-          className="text-center max-w-3xl mx-auto mb-16"
+          className="text-left max-w-3xl mb-16"
         >
           <span className="text-red-600 font-bold text-xs uppercase tracking-widest bg-red-600/10 px-3.5 py-1.5 rounded-full inline-block mb-3">
             Get In Touch
@@ -96,9 +96,9 @@ export default function ContactSection() {
           <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
             Connect With Our B2B Desk
           </h2>
-          <div className="w-16 h-1 bg-red-600 mx-auto mt-4 rounded-full" />
-          <p className="mt-4 text-slate-600 text-sm md:text-base leading-relaxed">
-            Have an ongoing building project, sub-dealer enquiry, or retail interior requirement? Submit this rapid form and our procurement manager will call you back.
+          <div className="w-16 h-1 bg-red-600 mt-4 rounded-full" />
+          <p className="mt-4 text-slate-600 text-sm md:text-base leading-relaxed lg:whitespace-nowrap">
+            Submit this form to get a quick callback from our B2B procurement advisors.
           </p>
         </motion.div>
 

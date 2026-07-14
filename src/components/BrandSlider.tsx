@@ -116,22 +116,21 @@ export default function BrandSlider({ onSelectBrand }: BrandSliderProps) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
-          className="text-center max-w-3xl mx-auto mb-20"
+          className="text-left max-w-3xl mb-20"
         >
-          <div className="flex items-center justify-center space-x-2 text-red-600 mb-2">
-            <span className="h-px w-8 bg-red-600" />
+          <div className="flex items-center space-x-2 text-red-600 mb-2">
             <span className="font-extrabold text-xs uppercase tracking-widest">Our Brands</span>
             <span className="h-px w-8 bg-red-600" />
           </div>
           <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
             Trusted Brands. Premium Quality.
           </h2>
-          <div className="flex items-center justify-center space-x-1.5 mt-3">
+          <div className="flex items-center space-x-1.5 mt-3">
             <span className="w-1.5 h-1.5 rounded-full bg-red-600" />
             <span className="w-1.5 h-1.5 rounded-full bg-red-600" />
           </div>
-          <p className="mt-5 text-slate-500 text-sm md:text-base leading-relaxed font-medium">
-            We partner with world-class brands to bring you the finest range of tiles, sanitaryware, bath fittings, and hardware solutions.
+          <p className="mt-5 text-slate-500 text-sm md:text-base leading-relaxed font-medium lg:whitespace-nowrap">
+            We partner with world-class brands to bring you the finest tiles, sanitaryware, and bath fittings.
           </p>
         </motion.div>
 
@@ -163,7 +162,7 @@ export default function BrandSlider({ onSelectBrand }: BrandSliderProps) {
                 {/* Brand Name */}
                 <div className="mt-1">
                   {theme.isItalic ? (
-                    <h3 className="text-2xl font-bold font-serif italic text-red-600 tracking-wide py-0.5">Jaquar</h3>
+                    <h3 className="text-2xl font-bold font-sans italic text-red-600 tracking-wide py-0.5">Jaquar</h3>
                   ) : (
                     <h3 className="text-lg font-black text-slate-900 uppercase tracking-wider">{brand.name}</h3>
                   )}
