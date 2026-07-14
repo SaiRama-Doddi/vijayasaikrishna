@@ -111,7 +111,7 @@ export default function HeroSlider({ onNavigate }: HeroSliderProps) {
                 <div className="w-9 h-9 rounded-xl bg-red-600 flex items-center justify-center text-white flex-shrink-0 shadow-md shadow-red-600/10">
                   <Tag size={16} className="stroke-[2]" />
                 </div>
-                <div className="text-[11px] font-extrabold text-slate-800 leading-tight">
+                <div className="text-[13px] font-extrabold text-slate-800 leading-tight">
                   Factory-Direct<br />Pricing
                 </div>
               </div>
@@ -120,7 +120,7 @@ export default function HeroSlider({ onNavigate }: HeroSliderProps) {
                 <div className="w-9 h-9 rounded-xl bg-red-600 flex items-center justify-center text-white flex-shrink-0 shadow-md shadow-red-600/10">
                   <ShieldCheck size={16} className="stroke-[2]" />
                 </div>
-                <div className="text-[11px] font-extrabold text-slate-800 leading-tight">
+                <div className="text-[13px] font-extrabold text-slate-800 leading-tight">
                   Zero-Breakage<br />Secured Delivery
                 </div>
               </div>
@@ -129,7 +129,7 @@ export default function HeroSlider({ onNavigate }: HeroSliderProps) {
                 <div className="w-9 h-9 rounded-xl bg-red-600 flex items-center justify-center text-white flex-shrink-0 shadow-md shadow-red-600/10">
                   <Warehouse size={16} className="stroke-[2]" />
                 </div>
-                <div className="text-[11px] font-extrabold text-slate-800 leading-tight">
+                <div className="text-[13px] font-extrabold text-slate-800 leading-tight">
                   Vast Warehouse<br />Reserves
                 </div>
               </div>
@@ -144,7 +144,7 @@ export default function HeroSlider({ onNavigate }: HeroSliderProps) {
             >
               <button
                 onClick={() => onNavigate('products')}
-                className="bg-red-600 hover:bg-red-700 text-white font-extrabold px-6 py-3 rounded-xl text-xs uppercase tracking-wider flex items-center justify-center space-x-2 transition-all duration-200 shadow-md shadow-red-600/15 hover:shadow-lg hover:shadow-red-600/25 active:scale-95 cursor-pointer"
+                className="bg-red-600 hover:bg-red-700 text-white font-extrabold px-6 py-3 rounded-xl text-sm uppercase tracking-wider flex items-center justify-center space-x-2 transition-all duration-200 shadow-md shadow-red-600/15 hover:shadow-lg hover:shadow-red-600/25 active:scale-95 cursor-pointer"
               >
                 <Package size={15} />
                 <span>View Our Products</span>
@@ -153,7 +153,7 @@ export default function HeroSlider({ onNavigate }: HeroSliderProps) {
               
               <button
                 onClick={() => onNavigate('contact')}
-                className="bg-white hover:bg-slate-50 text-slate-800 font-extrabold px-6 py-3 rounded-xl text-xs uppercase tracking-wider border border-slate-200 flex items-center justify-center space-x-2 transition-all duration-200 active:scale-95 cursor-pointer shadow-sm"
+                className="bg-white hover:bg-slate-50 text-slate-800 font-extrabold px-6 py-3 rounded-xl text-sm uppercase tracking-wider border border-slate-200 flex items-center justify-center space-x-2 transition-all duration-200 active:scale-95 cursor-pointer shadow-sm"
               >
                 <PhoneCall size={15} className="text-red-600" />
                 <span>Contact Our Team</span>
